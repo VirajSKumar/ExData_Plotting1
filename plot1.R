@@ -1,6 +1,7 @@
 #Reads data for appropriate dates from file using skip and nrows
 data <-read.table("household_power_consumption.txt", sep=";", skip=66637, nrows=2880,
-              colClasses = c("character", "character","numeric","numeric","numeric"))
+              colClasses = c("character", "character","numeric","numeric","numeric",
+                             "numeric","numeric","numeric", "numeric"))
 
 #Sets the column names
 data <- setNames(data, c("Date","Time", "Global_active_power", "Global_reactive_power",
